@@ -1,7 +1,7 @@
 class MyWater {
-    private static int smallCapacity;
-    private static int midCapacity;
-    private static int largeCapacity;
+    private static double smallCapacity;
+    private static double midCapacity;
+    private static double largeCapacity;
     private int smallCounter;
     private int midCounter;
     private int largeCounter;
@@ -24,26 +24,31 @@ class MyWater {
         System.out.println(midCounter);
     }
 
-    static void setLargeCapacity(int largeCapacity) {
+    double getWater() {
+        return largeCounter * largeCapacity + smallCounter * smallCapacity + midCounter * midCapacity;
+    }
+
+    static void setLargeCapacity(double largeCapacity) {
         MyWater.largeCapacity = largeCapacity;
     }
 
-    static void setMidCapacity(int midCapacity) {
+    static void setMidCapacity(double midCapacity) {
         MyWater.midCapacity = midCapacity;
     }
 
-    static void setSmallCapacity(int smallCapacity) {
+    static void setSmallCapacity(double smallCapacity) {
         MyWater.smallCapacity = smallCapacity;
     }
 
-    static int getLargeCapacity() {
+    static double getLargeCapacity() {
         return largeCapacity;
     }
-    static int getSmallCapacity(){
+
+    static double getSmallCapacity() {
         return smallCapacity;
     }
 
-    static int getMidCapacity() {
+    static double getMidCapacity() {
         return midCapacity;
     }
 

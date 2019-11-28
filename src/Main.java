@@ -18,11 +18,18 @@ public class Main {
     public static void main(String[] args) {
         MyWater wmywater = new MyWater();
         wmywater.addLarge(10);
-        MyWater.setLargeCapacity(5);
+        MyWater.setLargeCapacity(2);
+        MyWater.setMidCapacity(1);
+        MyWater.setSmallCapacity(0.5);
         wmywater.addLarge(10);
-        System.out.println(MyWater.getLargeCapacity()*wmywater.getLargeCounter());
+        System.out.println(MyWater.getLargeCapacity() * wmywater.getLargeCounter());
         wmywater.addLarge(10);
-        System.out.println(MyWater.getLargeCapacity()*wmywater.getLargeCounter());
-
+        wmywater.addSmall(10);
+        wmywater.addMid(20);
+        //System.out.println(MyWater.getLargeCapacity()*wmywater.getLargeCounter());
+        System.out.println("Razem jest " + (int) wmywater.getWater() + " litrów wody.");
+        System.out.println("Dużych butelek: " + wmywater.getLargeCounter() + " szt po " + MyWater.getLargeCapacity() + " l");
+        System.out.println("Średnich butelek: " + wmywater.getMidCounter() + " szt. po " + MyWater.getMidCapacity() + " l");
+        System.out.println("Małych butelek: " + wmywater.getSmallCounter() + " szt po " + MyWater.getSmallCapacity() + " l");
     }
 }
