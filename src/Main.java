@@ -21,6 +21,8 @@ public class Main {
         MyWater.setLargeCapacity(5);
         wmywater.addLarge(10);
         System.out.println(MyWater.getLargeCapacity()*wmywater.getLargeCounter());
+        wmywater.addLarge(10);
+        System.out.println(MyWater.getLargeCapacity()*wmywater.getLargeCounter());
 
     }
 }
