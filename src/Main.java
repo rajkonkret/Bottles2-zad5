@@ -17,15 +17,20 @@ public class Main {
 //    małych butelek: 3
     public static void main(String[] args) {
         MyWater wmywater = new MyWater();
-        wmywater.addLarge(10);
+
         MyWater.setLargeCapacity(2);
         MyWater.setMidCapacity(1);
         MyWater.setSmallCapacity(0.5);
+
         wmywater.addLarge(10);
+        wmywater.addLarge(10);
+
         System.out.println(MyWater.getLargeCapacity() * wmywater.getLargeCounter());
+
         wmywater.addLarge(10);
         wmywater.addSmall(10);
         wmywater.addMid(20);
+
         //System.out.println(MyWater.getLargeCapacity()*wmywater.getLargeCounter());
         System.out.println("Razem jest " + (int) wmywater.getWater() + " litrów wody.");
         System.out.println("Dużych butelek: " + wmywater.getLargeCounter() + " szt po " + MyWater.getLargeCapacity() + " l");
